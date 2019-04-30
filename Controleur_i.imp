@@ -1,0 +1,28 @@
+/* Controleur_i
+ * Author: jaespes
+ * Creation date: 29/04/2019
+ */
+
+IMPLEMENTATION 
+    Controleur_i   
+REFINES 
+    Controleur
+IMPORTS
+    Detecteur,
+    Contexte
+OPERATIONS 
+    dispenseur <-- choisir_dispenseur = 
+        IF LATITUDE <= 60 THEN 
+            dispenseur := 1
+        ELSIF LATITUDE <= 120 THEN
+            dispenseur := 2
+        ELSIF LATITUDE <= 180 THEN
+            dispenseur := 3
+        ELSIF LATITUDE <= 240 THEN
+            dispenseur := 4
+        ELSIF LATITUDE <= 300 THEN
+            dispenseur := 5
+        ELSE 
+            dispenseur := 6
+        END
+END

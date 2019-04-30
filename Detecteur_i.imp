@@ -1,0 +1,32 @@
+/* Detecteur_i
+ * Author: jaespes & mgolovan
+ * Creation date: 17/04/2019
+ */
+IMPLEMENTATION Detecteur_i
+REFINES Detecteur
+SEES
+    Contexte
+IMPORTS
+    Capteurs 
+CONCRETE_VARIABLES
+    longitude, distance, latitude
+INITIALISATION
+    longitude := 0;
+    distance := 0;
+    latitude := 0
+OPERATIONS
+    echantillonner_longitude =
+         BEGIN
+				longitude <-- mesurer_longitude
+	     END;
+	 
+	 echantillonner_distance =
+	     BEGIN
+				distance <-- mesurer_distance 
+	     END;
+	 
+	 echantillonner_latitude =
+	     BEGIN
+				latitude <-- mesurer_latitude
+	     END
+END

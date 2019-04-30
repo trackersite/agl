@@ -1,0 +1,33 @@
+/* Capteurs_i
+ * Author: jaespes
+ * Creation date: 29/04/2019
+ */
+
+IMPLEMENTATION Capteurs_i
+REFINES Capteurs
+SEES
+		Contexte
+IMPORTS
+		BASIC_IO
+OPERATIONS
+    m1 <-- mesurer_latitude =
+			VAR var1 IN
+			    STRING_WRITE("saisir valeur fournie par CAPTEUR LATITUDE");
+    	          var1 <-- INTERVAL_READ( 0, LATITUDE);
+    	          m1 := var1
+          END;
+  
+    m2 <-- mesurer_longitude =
+			VAR var2 IN
+			    STRING_WRITE("saisir valeur fournie par CAPTEUR LONGITUDE");
+    	          var2 <-- INTERVAL_READ( 0, LONGITUDE);
+    	          m2 := var2
+          END;
+  
+    m3 <-- mesurer_distance =
+			VAR var3 IN
+			    STRING_WRITE("saisir valeur fournie par CAPTEUR DISTANCE");
+    	          var3 <-- INTERVAL_READ( 0, DISTANCE);
+    	          m3 := var3
+          END
+ END

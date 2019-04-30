@@ -1,0 +1,13 @@
+/* Contexte_i
+ * Author: jaespes & mgolovan
+ * Creation date: 17/04/2019
+ */
+
+IMPLEMENTATION Contexte_i
+REFINES 
+   Contexte
+VALUES
+   LATITUDE = 0;
+   LONGITUDE = 0;
+   DISTANCE = 0
+END 
