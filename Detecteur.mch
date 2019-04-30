@@ -17,18 +17,18 @@ INITIALISATION
 	distance := 0 ||
 	latitude := 0 
 OPERATIONS
-	echantillonner_longitude = 
-		BEGIN
-            longitude := 0
-		END;
-		
-	echantillonner_distance = 
-		BEGIN
-            distance := 0
-		END;
+    	echantillonner_latitude <-- prendre_latitude =
+		   BEGIN
+		        echantillonner_latitude :: -90..LATITUDE 
+        END;
 
-	echantillonner_latitude = 
-		BEGIN
-            latitude := 0
-		END
+	   echantillonner_longitude <-- prendre_longitude =
+		   BEGIN
+		        echantillonner_longitude :: -180..LONGITUDE
+        END;
+
+	   echantillonner_distance <-- prendre_distance =
+		   BEGIN
+		        echantillonner_distance :: 0..DISTANCE 
+		   END
 END
